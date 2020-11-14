@@ -1,0 +1,210 @@
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden; 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    background-image: url('body-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    z-index: -2;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.select-chars{
+  padding-top: 50px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+}
+
+#bic, #panda{
+  opacity: 0.5;
+}
+
+.select-chars span img{
+  border: 3px solid yellow;
+  height: 120px;
+}
+
+#char-text{
+  font-size: 24px;
+  color: whitesmoke;
+  font-weight: 400;
+}
+
+.score{
+  display: none;
+}
+
+.game{
+    width: 900px;
+    height: 400px;
+    background: url("bg-body-morning.gif");
+    filter: saturate(4);
+    background-repeat: no-repeat;
+    background-size: auto;
+    margin: auto;
+    display: none;
+}
+.score, #content{
+    color: white;
+}
+
+#content p{
+    max-width: 30em;
+    color: white;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    letter-spacing:0.1em;
+    text-align:center;
+    margin: 40px auto;
+    text-transform: lowercase;
+  
+    font-size: 2em;
+    font-variant: small-caps;
+  }
+
+  #display {
+      max-width: 320px;
+      margin: auto;
+      text-align: center;
+	color: white;
+	font-size: 2.9em;
+	top: 10px;
+  border-bottom: thin solid;
+  padding-bottom: 20px;
+  opacity: 0.80;
+  filter: alpha(opacity=80); 
+}
+
+#date {
+  margin-top: 80px;  
+  text-align: center;  
+  color: white;
+  font-size: 1.3em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  filter: alpha(opacity=60); 
+}
+
+#character{
+    width: 120px;
+    height: 120px;
+    background-image: url('bic.gif');
+    background-repeat: no-repeat;
+    position:relative;
+    top: 150px;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 30px;}
+    70%{top: 50px;}
+    100%{top: 150px;}
+}
+
+#stone{
+    background-image: url('stone.png');
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 100px;
+    left: 900px;
+    animation: stone 3s infinite linear;
+}
+
+@keyframes stone{
+    0%{left: 800px}
+    100%{left: -20px}
+}
+
+#flower{
+    background-image: url('flower.gif');
+    background-repeat: no-repeat;    
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 40px;
+    left: 900px;
+    animation: flower 3s infinite linear;
+}
+
+@keyframes flower{
+    0%{left: 800px}
+    100%{left: -100px}
+}
+
+p{
+    text-align: center;
+}
+
+
+* {box-sizing: border-box}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.play {
+  background-color: #f44336;
+}
+
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: relative; 
+  z-index: 1;
+  left: 0;
+  
+  margin: auto;
+  max-width: 400px; 
+  height: 100%; 
+  overflow: auto; 
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

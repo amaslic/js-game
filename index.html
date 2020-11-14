@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sanja & Panda riding cvjetko</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" onload="startTime(); startDate();">
+    <div class="select-chars" id="chars">
+        <span id="bic"  onclick="selectedChar(1)" onmouseover="showText(1)" onmouseleave="document.getElementById('char-text').innerHTML=''; document.getElementById('bic').style.opacity=0.5;"><img src="bic.gif"></span>
+        <span id="panda" onmouseover="showText(2)" onmouseleave="document.getElementById('char-text').innerHTML=''; document.getElementById('panda').style.opacity=0.5" onclick="selectedChar(2)"><img src="panda.gif"></span>
+        <p id="char-text"></p>
+    </div>
+    <div class="game" id="game">
+        <div id="character"></div>
+        <div id="stone"></div>
+        <div id="flower"></div>
+    </div>
+    <p class="score" id="score">Prikupljeno <span id="point">cvijeća: </span> <span id="scoreSpanBottom">0</span> <br />Pređeno: <span id="distanceSpanBottom"></span></p>
+    <div id="date"></div>
+    <div id="display"></div>
+    <div id="content">
+        <p id="quote"></p>
+      </div>
+   <div id="game-end" class="modal">
+    <div class="modal-content">
+      <div class="container">
+        <h1>Sanja, pazi kamen!</h1>
+        <p>Prikupljeno <span id="pointEnd">cvijeća: </span><span id="scoreSpan"></span></p>
+        <p>Pređena distanca: <span id="distanceSpan"></span></p>
+  
+        <div class="clearfix">
+          <button type="button" class="play" onclick="location.reload()">Igraj ponovo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
